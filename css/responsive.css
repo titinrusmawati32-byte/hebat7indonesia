@@ -1,0 +1,161 @@
+/* ==========================================================================
+   RESPONSIVE CSS - Jurnal Digital 7 Kebiasaan Anak Indonesia Hebat
+   ========================================================================== */
+
+/* Mobile Floating Bottom Bar */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--color-border);
+  padding: 8px 12px;
+  z-index: 999;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-slate-medium);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.mobile-nav-item .nav-icon {
+  font-size: 20px;
+}
+
+.mobile-nav-item.active {
+  color: var(--color-primary);
+}
+
+/* Tablet & Mobile Breakpoint (Max 1024px) */
+@media (max-width: 1024px) {
+  .habits-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rekap-habits-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Mobile Devices (Max 768px) */
+@media (max-width: 768px) {
+  /* Hide Desktop Sidebar */
+  .app-sidebar {
+    display: none;
+  }
+
+  /* Show Mobile Bottom Navigation */
+  .mobile-bottom-nav {
+    display: block;
+  }
+
+  /* Top App Bar Mobile */
+  .top-app-bar {
+    padding: 12px 16px;
+  }
+
+  .bar-date-section {
+    display: none;
+  }
+
+  /* Add padding bottom to page container so bottom nav doesn't overlap */
+  .page-container {
+    padding: 16px 16px 80px;
+  }
+
+  /* 7 Habits Row Mobile Scroll */
+  .habits-row {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    gap: 10px;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .habits-row::-webkit-scrollbar {
+    display: none; /* Safari/Chrome */
+  }
+
+  .habit-badge-card {
+    min-width: 90px;
+    flex-shrink: 0;
+  }
+
+  /* Student Welcome Banner */
+  .student-welcome-banner {
+    padding: 18px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .welcome-text h2 {
+    font-size: 18px;
+  }
+
+  /* Form Jurnal Grid: Stack to single column */
+  .journal-form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .form-actions-row {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .form-actions-row .btn {
+    width: 100%;
+  }
+
+  /* KPI Grid */
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rekap-habits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Filter bar stacking */
+  .filter-bar-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* App Mode Badge on Mobile */
+  .app-mode-badge {
+    bottom: 70px;
+    right: 12px;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
