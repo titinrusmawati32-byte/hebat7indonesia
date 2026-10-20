@@ -5,10 +5,10 @@ window.APP_CONFIG = {
   // Saklar Mode:
   // true = Gunakan simulasi memori lokal (untuk preview instan / testing offline tanpa backend)
   // false = Hubungkan langsung ke Cloudflare Worker API
-  IS_MOCK: true,
+  IS_MOCK: false,
 
   // Endpoint Cloudflare Worker (Diisi saat deployment Cloudflare Worker aktif)
-  API_BASE_URL: 'https://jurnal-7kebiasaan-api.yourdomain.workers.dev',
+  API_BASE_URL: 'https://hebat7indonesia.titin-rusmawati32.workers.dev',
 
   // Identitas & Pengaturan Default Sekolah
   SCHOOL_NAME: 'SD Negeri Indonesia Hebat',
